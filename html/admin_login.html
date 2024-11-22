@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Bejelentkezés admin felületre</title>
+</head>
+<body>
+    
+    <div class="container">
+        <button id="dark-mode-toggle">🌙</button>
+        <h2>Bejelentkezés admin felületre</h2>
+        <form action="../php/admin_login.php" method="POST">
+            <label for="username">Felhasználónév:</label>
+            <input type="text" id="username" name="username" required pattern=".{8,}" title="A felhasználónévnek legalább 8 karakter hosszúnak kell lennie"required>
+
+            <label for="password">Jelszó:</label>
+            <input type="password" id="password" name="password" required pattern="(?=.*\d).{8,}" title="A jelszónak legalább 8 karakter hosszúnak kell lennie és tartalmaznia kell legalább egy számot"required>
+
+            <button type="submit">Bejelentkezés</button>
+        </form>
+        
+        </div>
+    </div>
+    <script src="../js/dark-mode.js"></script>
+</body>
+</html>

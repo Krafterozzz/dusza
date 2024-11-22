@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verseny Jelentkezés</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <button id="dark-mode-toggle">🌙</button>
+        <div class="top-options">
+            <a href="./html/admin_login.html">Admin Belépés</a> |
+            <a href="./html/versenyzo_login.html">Jelentkező Belépés</a>
+        </div>
+
+        <h2>Dusza Árpád Verseny Jelentkezési Lap</h2>
+        <form action="./php/submit_application.php" method="POST">
+          
+            <label for="username">Felhasználónév:</label>
+            <input type="text" id="username" name="username" required pattern=".{8,}" title="A felhasználónévnek legalább 8 karakter hosszúnak kell lennie"required>
+    
+            <label for="password">Jelszó:</label>
+            <input type="password" id="password" name="password" required pattern="(?=.*\d).{8,}" title="A jelszónak legalább 8 karakter hosszúnak kell lennie és tartalmaznia kell legalább egy számot"required>
+
+            <label for="team_name">Csapat neve:</label>
+            <input type="text" id="team_name" name="team_name" required>
+
+            <label for="school_name">Iskola neve:</label>
+            <input type="text" id="school_name" name="school_name" required>
+
+            <label for="team_member1_name">Csapattag1 név:</label>
+            <input type="text" id="team_member1_name" name="team_member1_name" required>
+
+            <label for="team_member1_grade">Csapattag1 évfolyam:</label>
+            <input type="number" id="team_member1_grade" name="team_member1_grade" required>
+            
+            <label for="team_member2_name">Csapattag2 név:</label>
+            <input type="text" id="team_member2_name" name="team_member2_name" required>
+
+            <label for="team_member2_grade">Csapattag2 évfolyam:</label>
+            <input type="number" id="team_member2_grade" name="team_member2_grade" required>
+
+            <label for="team_member3_name">Csapattag3 név:</label>
+            <input type="text" id="team_member3_name" name="team_member3_name" required>
+
+            <label for="team_member3_grade">Csapattag3 évfolyam:</label>
+            <input type="number" id="team_member3_grade" name="team_member3_grade" required>
+
+            <label for="substitute_member_name">Pót tag név:</label>
+            <input type="text" id="substitute_member_name" name="substitute_member_name">
+
+            <label for="substitute_member_grade">Pót tag évfolyam:</label>
+            <input type="number" id="substitute_member_grade" name="substitute_member_grade">
+
+            <label for="teacher">Felkészítő tanár/tanárok:</label>
+            <input type="text" id="teacher" name="teacher" required>
+
+            <label for="category">Kategória:</label>
+            <select id="category" name="category">
+                <option value="kategori1">Kategória 1</option>
+                <option value="kategori2">Kategória 2</option>
+                <option value="kategori3">Kategória 3</option>
+            </select>
+
+            <label for="programming_language">Választott programnyelv:</label>
+            <select id="programming_language" name="programming_language">
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="javascript">JavaScript</option>
+                <option value="csharp">C#</option>
+            </select>
+
+            <button type="submit">Jelentkezés Beküldése</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <script src="./js/dark-mode.js"></script>
+    <script src="./js/application.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bejelentkezés versenyző felületre</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <button id="dark-mode-toggle">🌙</button>
+        <h2>Bejelentkezés versenyző felületre</h2>
+        <form action="../php/versenyzo_login.php" method="POST">
+            
+            <label for="username">Felhasználónév:</label>
+            <input type="text" id="username" name="username" required pattern=".{8,}" title="A felhasználónévnek legalább 8 karakter hosszúnak kell lennie"required>
+<br>
+            <label for="password">Jelszó:</label>
+            <input type="password" id="password" name="password" required pattern="(?=.*\d).{8,}" title="A jelszónak legalább 8 karakter hosszúnak kell lennie és tartalmaznia kell legalább egy számot"required>
+            
+            <button type="submit">Bejelentkezés</button>
+
+        </form>
+        
+        <div id="error-message"></div>
+        <br>
+    </div>
+    <script src="../js/dark-mode.js"></script>
+    
+</body>
+</html>

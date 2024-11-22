@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesschool.css">
+
+    <title>Iskolák Listája</title>
+   
+</head>
+<body>
+    <div class="container">
+        <button id="dark-mode-toggle">🌙</button>
+        <h2>Versenyzők/iskolák kilistázása</h2>
+        <table id="schools-table">
+            <thead>
+                <tr>
+                    <th>Iskola neve</th>
+                    <th>Csapat neve</th>
+                    <th>Státusz</th>
+                    <th>Részletek</th>
+                    <th>Műveletek</th>
+                </tr>
+            </thead>
+            <tbody id="schools-body">
+            </tbody>
+        </table>
+        <div id="message"></div>
+        <br>
+        <form action="../php/logoutadmin.php" method="post">
+            <button type="submit">Kijelentkezés</button>
+        </form>
+    </div>
+
+    <!-- Törlés megerősítő dialógus -->
+<div class="overlay" id="deleteOverlay"></div>
+<div class="confirmation-dialog" id="deleteConfirmation">
+    <h3>Megerősítés</h3>
+    <br>
+    <p>Biztosan törölni szeretné ezt a jelentkezést?</p>
+    <br>
+    <button id="confirmDelete" class="delete-btn">Törlés</button>
+    <button id="cancelDelete">Mégse</button>
+</div>
+
+<!-- Elfogadás megerősítő dialógus -->
+<div class="overlay" id="approveOverlay"></div>
+<div class="confirmation-dialog" id="approveConfirmation">
+    <h3>Megerősítés</h3>
+    <br>
+    <p>Biztosan elfogadja ezt a jelentkezést?</p>
+    <br>
+    <button id="confirmApprove" class="approve-btn">Elfogadás</button>
+    <button id="cancelApprove">Mégse</button>
+</div>
+
+<!-- Visszautasítás megerősítő dialógus -->
+<div class="overlay" id="rejectOverlay"></div>
+<div class="confirmation-dialog" id="rejectConfirmation">
+    <h3>Megerősítés</h3>
+    <br>
+    <p>Biztosan visszautasítja ezt a jelentkezést?</p>
+    <br>
+    <button id="confirmReject" class="reject-btn">Visszautasítás</button>
+    <button id="cancelReject">Mégse</button>
+
+</div>
+
+
+    <script src="../js/dark-mode.js"></script>
+    <script src="../js/localstorage.js"></script>
+    <script src="../js/school_profile.js"></script>
+
+
+
+</body>
+</html>

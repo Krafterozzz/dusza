@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Szerkesztése</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <button id="dark-mode-toggle">🌙</button>
+        <h2>Csapat adatainak szerkesztése</h2>
+        <form id="profile-form">
+            <label for="team_name">Csapat neve:</label>
+            <input type="text" id="team_name" name="team_name" required>
+
+            <label for="school_name">Iskola neve:</label>
+            <input type="text" id="school_name" name="school_name" required>
+
+            <label for="team_member1_name">Első tag neve:</label>
+            <input type="text" id="team_member1_name" name="team_member1_name" required>
+
+            <label for="team_member1_grade">Első tag osztály:</label>
+            <input type="number" id="team_member1_grade" name="team_member1_grade" required>
+
+            <label for="team_member2_name">Második tag neve:</label>
+            <input type="text" id="team_member2_name" name="team_member2_name" required>
+
+            <label for="team_member2_grade">Második tag osztály:</label>
+            <input type="number" id="team_member2_grade" name="team_member2_grade" required>
+
+            <label for="team_member3_name">Harmadik tag neve:</label>
+            <input type="text" id="team_member3_name" name="team_member3_name" required>
+
+            <label for="team_member3_grade">Harmadik tag osztály:</label>
+            <input type="number" id="team_member3_grade" name="team_member3_grade" required>
+
+            <label for="substitute_member_name">Pót tag név:</label>
+            <input type="text" id="substitute_member_name" name="substitute_member_name">
+            
+            <label for="substitute_member_grade">Pót tag évfolyam:</label>
+            <input type="number" id="substitute_member_grade" name="substitute_member_grade">
+
+            <label for="teacher">Felkészítő tanár/tanárok:</label>
+            <input type="text" id="teacher" name="teacher" required>
+
+            <label for="category">Kategória:</label>
+            <select id="category" name="category">
+                <option value="kategori1">Kategória 1</option>
+                <option value="kategori2">Kategória 2</option>
+                <option value="kategori3">Kategória 3</option>
+            </select>
+
+            <label for="programming_language">Választott programnyelv:</label>
+            <select id="programming_language" name="programming_language">
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="javascript">JavaScript</option>
+                <option value="csharp">C#</option>
+            </select>
+
+            <button type="submit">Módosítások Mentése</button>
+        </form>
+        <br>
+        <div id="message"></div>
+        <br>
+        <form action="../index.html" method="post">
+            <button type="submit">Kijelentkezés</button>
+        </form>
+    </div>
+    <script src="../js/dark-mode.js"></script>
+    <script src="../js/versenyzo_profile.js"></script>
+   
+    
+</body>
+</html>

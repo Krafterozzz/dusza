@@ -1,0 +1,157 @@
+/* Modern CSS with animations for login, register, and success pages */
+
+:root {
+    --primary-color: #2884ee;
+    --secondary-color: #f5f7fa;
+    --text-color: #333;
+    --success-color: #ff0000;
+    --error-color: #000000;
+
+    --dark-bg-color: #333;
+    --dark-text-color: #f5f7fa;
+    --dark-container-bg: #444;
+    --dark-primary-color: #2884ee;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    width: 100%;
+}
+
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .container {
+    background-color: var(--dark-container-bg);
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode a {
+    color: var(--dark-primary-color);
+}
+
+body.dark-mode input {
+    border-color: var(--dark-primary-color);
+}
+
+body.dark-mode button {
+    background-color: var(--dark-primary-color);
+}
+
+body.dark-mode button:hover {
+    background-color: #5594cc;
+}
+
+.container {
+    position: relative; /* Allows absolute positioning of button inside */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+}
+
+
+.success-message {
+    color: var(--success-color);
+    font-size: 24px;
+    margin-bottom: 16px;
+    animation: pulse 2s infinite;
+  }
+
+/* Dark mode toggle button inside the container */
+#dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #3a7bc8;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    margin-bottom: 24px;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.message {
+    color: var(--success-color);
+    margin-top: 20px;
+}
+
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

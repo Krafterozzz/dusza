@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesschool.css">
+    <script src="../js/localstorage.js"></script>
+    <title>Verseny Kategória kezelése</title>
+</head>
+<body>
+    <div class="container">
+        <button id="dark-mode-toggle">🌙</button>
+        <h1>Verseny kategóriák szerkesztése</h1>
+        
+        <button id="addCategoryBtn" class="add-btn">Új kategória hozzáadása</button>
+        <br>
+        <br>
+        <h2>Kategóriák Listája</h2>
+        
+        <table id="categories-table">
+            <thead>
+                <tr>
+                    <th>Kategória neve</th>
+                    <th>Műveletek</th>
+                </tr>
+            </thead>
+            <tbody id="categories-body">
+            </tbody>
+        </table>
+        <div id="message"></div>
+        <br>
+        <form action="../php/logoutadmin.php" method="post">
+            <button type="submit">Kijelentkezés</button>
+        </form>
+
+        <!-- Dialog boxes inside container -->
+        <div class="overlay" id="editOverlay"></div>
+        <div class="confirmation-dialog" id="editDialog">
+            <h3>Kategória szerkesztése</h3>
+            <input type="text" id="editCategoryName" placeholder="Kategória neve">
+            <br><br>
+            <button id="confirmEdit" class="edit-btn">Mentés</button>
+            <button id="cancelEdit">Mégse</button>
+        </div>
+
+        <div class="overlay" id="deleteOverlay"></div>
+        <div class="confirmation-dialog" id="deleteDialog">
+            <h3>Megerősítés</h3>
+            <p>Biztosan törölni szeretné ezt a kategóriát?</p>
+            <br>
+            <button id="confirmDelete" class="delete-btn">Törlés</button>
+            <button id="cancelDelete">Mégse</button>
+        </div>
+
+        <div class="overlay" id="addOverlay"></div>
+        <div class="confirmation-dialog" id="addDialog">
+            <h3>Új kategória hozzáadása</h3>
+            <input type="text" id="newCategoryName" placeholder="Kategória neve">
+            <br><br>
+            <button id="confirmAdd" class="add-btn">Hozzáadás</button>
+            <button id="cancelAdd">Mégse</button>
+        </div>
+    </div>
+
+    <script src="../js/dark-mode.js"></script>
+    <script src="../js/kategoria.js"</script>
+
+    
+    </script>
+</body>
+</html>

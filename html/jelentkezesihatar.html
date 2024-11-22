@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesdeadline.css">
+    <title>Jelentkezési határidő</title>
+</head>
+<body>
+    <div class="container">
+        <button id="dark-mode-toggle">🌙</button>
+        <h2>Jelentkezési határidő</h2>
+        <br>
+
+ <div class="section">
+   
+    <form id="deadline-form">
+        <label for="deadline">Jelentkezési határidő:</label>
+        <input type="datetime-local" id="deadline" name="deadline" required>
+        <button type="submit">Módosítás</button>
+    </form>
+    <br>
+    <p id="current-deadline">Jelenlegi határidő:PLACEHOLDER</p>
+
+
+</div>
+<div class="message" id="message"></div>
+<br>
+<button id="close-registration" class="warning">Jelentkezés lezárása</button>
+        
+<div style="height: 20px;"></div>
+
+<form action="../php/logoutadmin.php" method="post">
+    <button type="submit">Kijelentkezés</button>
+</form>
+    </div> 
+    <script src="../js/dark-mode.js"></script>
+    <script src="../js/jelentkezesihatar.js"></script>
+
+
+</body>
+</html>
+

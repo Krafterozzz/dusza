@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesschool.css">
+    <script src="../js/localstorage.js"></script>
+    <title>Programnyelvek kezelése</title>
+</head>
+<body>
+    <div class="container">
+        <button id="dark-mode-toggle">🌙</button>
+        <h1>Programnyelvek szerkesztése</h1>
+        
+        <button id="addLanguageBtn" class="add-btn">Új programnyelv hozzáadása</button>
+        <br>
+        <h2>Programnyelvek Listája</h2>
+        
+        <table id="languages-table">
+            <thead>
+                <tr>
+                    <th>Programnyelv neve</th>
+                    <th>Műveletek</th>
+                </tr>
+            </thead>
+            <tbody id="languages-body">
+            </tbody>
+        </table>
+        <div id="message"></div>
+        <br>
+        <form action="../php/logoutadmin.php" method="post">
+            <button type="submit">Kijelentkezés</button>
+        </form>
+
+        <!-- Dialog boxes inside container -->
+        <div class="overlay" id="editOverlay"></div>
+        <div class="confirmation-dialog" id="editDialog">
+            <h3>Programnyelv szerkesztése</h3>
+            <input type="text" id="editLanguageName" placeholder="Programnyelv neve">
+            <br><br>
+            <button id="confirmEdit" class="edit-btn">Mentés</button>
+            <button id="cancelEdit">Mégse</button>
+        </div>
+
+        <div class="overlay" id="deleteOverlay"></div>
+        <div class="confirmation-dialog" id="deleteDialog">
+            <h3>Megerősítés</h3>
+            <p>Biztosan törölni szeretné ezt a programnyelvet?</p>
+            <br>
+            <button id="confirmDelete" class="delete-btn">Törlés</button>
+            <button id="cancelDelete">Mégse</button>
+        </div>
+
+        <div class="overlay" id="addOverlay"></div>
+        <div class="confirmation-dialog" id="addDialog">
+            <h3>Új programnyelv hozzáadása</h3>
+            <input type="text" id="newLanguageName" placeholder="Programnyelv neve">
+            <br><br>
+            <button id="confirmAdd" class="add-btn">Hozzáadás</button>
+            <button id="cancelAdd">Mégse</button>
+        </div>
+    </div>
+
+    <script src="../js/dark-mode.js"></script>
+    <script src="../js/programnyelv.js"></script>
+
+    
+   
+</body>
+</html>
