@@ -46,9 +46,6 @@ document.getElementById("profile-form").addEventListener("submit", function(even
         if (data.success) {
             messageElement.innerText = "Adatok sikeresen frissítve!";
             messageElement.style.color = "green";  // Set the message text color to green
-            setTimeout(function() {
-                window.location.href = "./index.html";  // Redirect after 2 seconds
-            }, 2000);
         } else {
             messageElement.innerText = "Hiba történt: " + data.message;
             messageElement.style.color = "red";  // Set the message text color to red in case of an error

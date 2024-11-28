@@ -9,6 +9,8 @@
    
 </head>
 <body>
+
+    
     <div class="container">
         <button id="dark-mode-toggle">🌙</button>
         <h2>Versenyzők/iskolák kilistázása</h2>
@@ -26,10 +28,17 @@
             </tbody>
         </table>
         <div id="message"></div>
+		<br>
+        <button id="exportCsv" class="submit">
+            CSV Exportálása
+        </button>
+    
         <br>
         <form action="../php/logoutadmin.php" method="post">
             <button type="submit">Kijelentkezés</button>
         </form>
+        
+       
     </div>
 
     <!-- Törlés megerősítő dialógus -->
@@ -63,7 +72,7 @@
     <br>
     <button id="confirmReject" class="reject-btn">Visszautasítás</button>
     <button id="cancelReject">Mégse</button>
-
+    
 </div>
 
 

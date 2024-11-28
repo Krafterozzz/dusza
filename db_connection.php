@@ -1,9 +1,9 @@
 <?php
 
 // Adatbázis kapcsolódási adatok
-$servername = "nemethb.sulla.hu:3306";  // DNS név, portot külön adjuk megsz
+$servername = "localhost:3306";  // DNS név, portot külön adjuk megsz
 $db_username = "root";
-$db_password = "Ab12345678!";
+$db_password = "";
 $dbname = "duszadb";
 
 // Kapcsolódás az adatbázishoz

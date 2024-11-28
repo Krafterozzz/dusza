@@ -223,6 +223,11 @@ document.addEventListener("DOMContentLoaded", function() {
         showMessage("Hiba történt a lekérés során.", "error");
     });
 
+// CSV Export gomb eseménykezelője
+document.getElementById('exportCsv').addEventListener('click', () => {
+    window.location.href = '../php/export_csv.php';
+});
+    
     // Globális függvények
     window.showDeleteConfirmation = showDeleteConfirmation;
     window.showApproveConfirmation = showApproveConfirmation;
